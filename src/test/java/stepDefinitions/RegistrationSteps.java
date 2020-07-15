@@ -57,28 +57,28 @@ public class RegistrationSteps {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-//    @When("^I add my month of birth \"([^\"]*)\"$")
-//    public void i_add_my_month_of_birth(String month) {
-//        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[1]/select"))).selectByVisibleText(month);
-//    }
-//
-//    @When("^I add my day of birth \"([^\"]*)\"$")
-//    public void i_add_my_day_of_birth(String day) {
-//        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[2]/select"))).selectByVisibleText(day);
-//
-//    }
-//
-//    @When("^I add my year of birth \"([^\"]*)\"$")
-//    public void i_add_my_year_of_birth(String year) {
-//        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[3]/select"))).selectByVisibleText(year);
-//
-//    }
-//
-//    @Then("^I should see the registration page \"([^\"]*)\"$")
-//    public void i_should_see_the_registration_page(String arg1) {
-//        driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[5]/div[2]")).click();
-//
-//    }
+    @When("^I add my month of birth \"([^\"]*)\"$")
+    public void i_add_my_month_of_birth(String month) {
+        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[1]/select"))).selectByVisibleText(month);
+    }
+
+    @When("^I add my day of birth \"([^\"]*)\"$")
+    public void i_add_my_day_of_birth(String day) {
+        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[2]/select"))).selectByVisibleText(day);
+
+    }
+
+    @When("^I add my year of birth \"([^\"]*)\"$")
+    public void i_add_my_year_of_birth(String year) {
+        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[3]/select"))).selectByVisibleText(year);
+
+    }
+
+    @Then("^I should see the registration page \"([^\"]*)\"$")
+    public void i_should_see_the_registration_page(String arg1) {
+        driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[5]/div[2]")).click();
+
+    }
 
 
 }
