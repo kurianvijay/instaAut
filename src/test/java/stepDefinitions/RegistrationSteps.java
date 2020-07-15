@@ -43,42 +43,43 @@ public class RegistrationSteps {
     @Given("^I add my password \"([^\"]*)\"$")
     public void i_add_my_password(String password)  {
         driver.findElement(By.name("password")).sendKeys(password);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @Given("^I click the button Next$")
     public void i_click_the_button_Next() {
         driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/form/div[7]/div/button")).click();
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @When("^I should see the birthday page \"([^\"]*)\"$")
     public void i_should_see_the_birthday_page(String birthday_url) {
         driver.get(birthday_url);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-    @When("^I add my month of birth \"([^\"]*)\"$")
-    public void i_add_my_month_of_birth(String month) {
-        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[1]/select"))).selectByVisibleText(month);
-    }
-
-    @When("^I add my day of birth \"([^\"]*)\"$")
-    public void i_add_my_day_of_birth(String day) {
-        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[2]/select"))).selectByVisibleText(day);
-
-    }
-
-    @When("^I add my year of birth \"([^\"]*)\"$")
-    public void i_add_my_year_of_birth(String year) {
-        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[3]/select"))).selectByVisibleText(year);
-
-    }
-
-    @Then("^I should see the registration page \"([^\"]*)\"$")
-    public void i_should_see_the_registration_page(String arg1) {
-        driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[5]/div[2]")).click();
-
-    }
+//    @When("^I add my month of birth \"([^\"]*)\"$")
+//    public void i_add_my_month_of_birth(String month) {
+//        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[1]/select"))).selectByVisibleText(month);
+//    }
+//
+//    @When("^I add my day of birth \"([^\"]*)\"$")
+//    public void i_add_my_day_of_birth(String day) {
+//        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[2]/select"))).selectByVisibleText(day);
+//
+//    }
+//
+//    @When("^I add my year of birth \"([^\"]*)\"$")
+//    public void i_add_my_year_of_birth(String year) {
+//        new Select(driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[4]/div/div/span/span[3]/select"))).selectByVisibleText(year);
+//
+//    }
+//
+//    @Then("^I should see the registration page \"([^\"]*)\"$")
+//    public void i_should_see_the_registration_page(String arg1) {
+//        driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[5]/div[2]")).click();
+//
+//    }
 
 
 }
