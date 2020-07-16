@@ -5,7 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Hooks {
+public class Hooks extends CommonFunctions {
 
     CommonFunctions cFObject = new CommonFunctions();
 
