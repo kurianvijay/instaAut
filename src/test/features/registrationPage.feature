@@ -12,4 +12,5 @@ Feature: As a new User, I would like to register and create an account
     When I add my day of birth "16"
     When I add my year of birth "2000"
     And I click the Next button
-    Then I should be able to see the message "Enter the confirmation code we sent to vicon58331@gmail.com."
+    Then I should be able to see the message "Resend Code."
+#  Enter the confirmation code we sent to vicon58331@gmail.com.

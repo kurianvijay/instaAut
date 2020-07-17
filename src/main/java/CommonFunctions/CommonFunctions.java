@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class CommonFunctions {
 
     public static WebDriver driver;
+    public static CommonFunctions cFObject = new CommonFunctions();
 
     public void openBrowser(){
         WebDriverManager.chromedriver().setup();

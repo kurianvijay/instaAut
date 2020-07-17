@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import CommonFunctions.CommonFunctions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,14 +13,13 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
 
-public class RegistrationSteps {
+public class RegistrationSteps extends CommonFunctions {
 
-    public static WebDriver driver;
+CommonFunctions commonFunctionsObject = new CommonFunctions();
 
     @Given("^I on the registration page \"([^\"]*)\"$")
     public void i_on_the_registration_page(String url) {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        commonFunctionsObject.openBrowser();
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//span[text()='Sign up']")).click();
@@ -75,8 +75,8 @@ public class RegistrationSteps {
 
     @Then("^I should be able to see the message \"([^\"]*)\"$")
     public void i_should_be_able_to_see_the_message(String expectedText)  {
-       String actualText =  driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[2]/div")).getText();
 
+        String actualText =  driver.findElement(By.xpath("//*[@id=\"react-root\"]/section/main/div/article/div/div[1]/div/div[2]/div/button")).getText();
         Assert.assertEquals(expectedText,actualText);
     }
 

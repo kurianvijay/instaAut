@@ -7,8 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Hooks extends CommonFunctions {
 
-    CommonFunctions cFObject = new CommonFunctions();
-
     @Before
     public void beforeTest(){
 
