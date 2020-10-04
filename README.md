@@ -1,2 +1,2 @@
 # instaAut
-Automating registration testing for Instagram with Cucumber and Gherkin
+Automating registration for Instagram using Java and following the BDD pattern using Cucumber.
